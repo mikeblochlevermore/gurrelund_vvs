@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+}
+
+p {
+    font-family: "Geologica", sans-serif;
+    font-weight: 100;
+}
+
+h2 {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: #113CFC;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    position: absolute;
+    font-family: "Geologica", sans-serif;
+}
+
+#navlinks {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    gap: 40px;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+  /* Styling the individual underlines */
+  .link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2;
+    background-color: white;
+    transition: width 0.2s ease-in-out;
+}
+
+  /* Hover effect - expanding the underline for each link */
+  .link:hover::before {
+    width: 100%;
+}
+
+#linkedin {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: 113CFC;
+    color: white;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#titles {
+    font-family: "Geologica", sans-serif;
+    text-align: left;
+    gap: 40px;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+}
+
+#logo {
+    border: 10px solid white;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    animation: pop 0.5s ease-out;
+}
+
+#contact_details h1 {
+        font-family: "Geologica", sans-serif;
+        text-align: left;
+        gap: 40px;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 30px;
+}
+
+#contact_logo {
+    border: 10px solid #113CFC;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #113CFC;
+    animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+    }
+    80% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+article {
+    background-color: aliceblue;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 40px 0;
+}
+
+@keyframes scale {
+    0% {
+        scale: 1;
+    }
+    100% {
+        scale: 1.1;
+    }
+}
+
+@keyframes scale_reverse {
+    0% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+.article_content:hover {
+    animation: scale 0.5s ease-in-out;
+    scale: 1.1;
+    animation-play-state: running;
+}
+
+.article_content:not(:hover) {
+    animation: scale_reverse 0.5s ease-in-out;
+    scale: 1;
+    animation-play-state: running;
+}
+
+.article_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 40px;
+    animation-play-state: paused;
+}
+
+.article_content h2 {
+    color: #113CFC;
+    margin-bottom: 20px;
+}
+
+.article_image {
+    overflow: hidden;
+    object-fit: cover;
+    border: 10px solid #113CFC;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#ve_logo {
+    overflow: hidden;
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+button {
+    border: 1px solid #113CFC;
+    padding: 20px;
+    width: 160px;
+    height: 30px;
+    outline: none;
+    border-radius: 30px;
+    align-items: center;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 15px;
+    color: #113CFC;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.alt_button {
+    border: 1px solid white;
+    color: white;
+}
+
+.alt_button:hover {
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    background-color: #113CFC;
+    color: white;
+
+}
+
+/* Overlaid container for articles */
+.overlay_container {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    animation: fadein 1s ease-in;
+}
+
+  /* Overlay content */
+  .overlay_content {
+    width: 50%;
+    height: 50%;
+    z-index: 4;
+    margin-left: 60px;
+    margin-top: 40px;
+    overflow-y: auto;
+    display: flex;
+    transform-origin: center;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    gap: 30px;
+  }
+
+#close_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #113CFC;
+    font-size: 40px;
+    padding: 20px;
+  }
+
+.materials_image {
+    width: 100%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.banner_text {
+    position: absolute;
+    width: 50%;
+    color: white;
+    font-size: large;
+    padding: 40px;
+    z-index: 2;
+}
+
+.banner_text h2 {
+    margin-bottom: 30px;
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity as needed */
+    z-index: 1; /* Ensure it's above the image */
+}
+
+#reviews {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+}
+
+.review {
+    display: block;
+    width: 50%;
+}
+
+.review h3 {
+    margin-bottom: 14px;
+    color: #113CFC;
+}
+
+.stars {
+    color: #113CFC;
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: #113CFC;
+    position: relative;
+    padding-bottom: 30px;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+#footer_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-left: -5%;
+}
+
+#footer_contact {
+    line-height: 25px;
+}
+
+#copyright {
+    color: white;
+    position: absolute;
+    bottom: 30;
+    margin-left: -2%;
+}
