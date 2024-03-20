@@ -333,7 +333,6 @@ button:hover {
     font-weight: 500;
     font-style: normal;
     font-size: 30px;
-    margin-bottom: 30px;
 }
 
 .banner::before {
@@ -446,6 +445,7 @@ footer h2 {
     right: 20px;
     font-size: 40px;
     color: white;
+    display: none;
 }
 
 #menu_button.spin {
@@ -462,6 +462,9 @@ footer h2 {
 }
 
 @media screen and (max-width: 550px) {
+    #menu_button {
+        display: flex;
+    }
     nav {
         background-color: #113CFC;
         display: flex;
@@ -533,6 +536,9 @@ footer h2 {
     .banner div {
         width: 80%;
     }
+    .banner_text {
+       padding: 0;
+    }
     footer {
         display: grid;
         height: auto;
@@ -572,6 +578,6 @@ footer h2 {
         border-radius: 20px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         position: relative;
-        margin: 20vh 0 0 0 ;
+        margin: 20vh 0 0 0;
       }
 }
