@@ -1,7 +1,6 @@
 // Update the copyright element with the current year
 document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
-    console.log(currentYear)
 
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement) {
@@ -54,4 +53,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// For mobile menu
+function toggleMenu() {
+    menuDiv = document.getElementById("mobile_menu")
+    menuButton = document.getElementById("menu_button")
+    // Display the menu
+    menuDiv.style.display = (menuDiv.style.display === 'none' || menuDiv.style.display === '') ? 'flex' : 'none';
 
+    if (menuButton.className === "fa-solid fa-bars") {
+        menuButton.className = "fa-solid fa-circle-xmark";
+        console.log("on")
+    } else {
+        menuButton.className = "fa-solid fa-bars";
+        console.log("off")
+    }
+}
