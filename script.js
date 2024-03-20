@@ -1,11 +1,47 @@
-// Update the copyright element with the current year
 document.addEventListener("DOMContentLoaded", function() {
+    // Update the copyright element with the current year
     const currentYear = new Date().getFullYear();
 
     const copyrightElement = document.getElementById('copyright');
     if (copyrightElement) {
         copyrightElement.textContent += currentYear;
     }
+
+    // FadeIn Effect for banners
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.05 // Adjust as needed
+    };
+
+    // Callback function to handle intersection changes
+    function handleIntersect(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    // Create a new IntersectionObserver
+    const observer = new IntersectionObserver(handleIntersect, options);
+
+    // Select all articles
+    const article = document.querySelectorAll('article');
+
+    // Observe each banner
+    article.forEach(article => {
+        observer.observe(article);
+    });
+
+    // Select all articles
+    const banner = document.querySelectorAll('.banner');
+
+    // Observe each banner
+    banner.forEach(banner => {
+        observer.observe(banner);
+    });
 });
 
 
@@ -68,3 +104,6 @@ function toggleMenu() {
         console.log("off")
     }
 }
+
+
+

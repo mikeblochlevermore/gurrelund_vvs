@@ -162,7 +162,10 @@ article {
     justify-content: center;
     align-items: center;
     padding: 40px 0 40px 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
+
 
 @keyframes scale {
     0% {
@@ -270,7 +273,7 @@ button:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    z-index: 3;
+    z-index: 4;
     animation: fadein 1s ease-in;
 }
 
@@ -278,7 +281,7 @@ button:hover {
   .overlay_content {
     width: 50%;
     height: 50%;
-    z-index: 4;
+    z-index: 5;
     margin-left: 60px;
     margin-top: 40px;
     overflow-y: auto;
@@ -315,6 +318,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
 }
 
 .banner_text {
@@ -413,14 +418,15 @@ footer h2 {
     display: none;
     background: black;
     top: 0;
+    padding-top: 5vh;
     margin-top: 50vh;
     width: 100vw;
     color: white;
     background-color: #113CFC;
     position: absolute;
     animation: slidein 0.5s ease-in-out;
-    height: 100vh;
-    z-index: 5;
+    height: 45vh;
+    z-index: 4;
     font-size: 40px;
     align-items: center;
     flex-direction: column;
@@ -499,6 +505,10 @@ footer h2 {
         justify-items: center;
         width: 80%;
         gap: 0;
+    }
+    .article_content:hover, .article_content:not(:hover) {
+        animation: none;
+        scale: 1;
     }
     .article_content div {
         display: grid;
