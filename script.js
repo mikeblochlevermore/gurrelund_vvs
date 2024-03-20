@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
         copyrightElement.textContent += currentYear;
     }
 
-    // FadeIn Effect for banners
+    // FadeIn Effect for articles and .banners:
+
     const options = {
         root: null,
         rootMargin: '0px',
